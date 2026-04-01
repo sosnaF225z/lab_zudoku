@@ -1,0 +1,18 @@
+## 🔑 Authorization
+
+The Task Management API uses **API Keys** or **Bearer Tokens** to ensure that only authorized users can access project data.
+
+### 1. Obtaining your Credentials
+To interact with the API, you need an `api_key`. Usually, this is generated in your User Profile under the "Developer Settings" tab of the Task Management Web Portal.
+
+### 2. Configuring the Client
+The Java SDK uses a singleton Configuration or a specific ApiClient instance.
+
+> **Important:** Never hardcode your API key in public repositories. Use environment variables.
+
+```yava
+ApiClient client = Configuration.getDefaultApiClient();
+client.setApiKey("YOUR_API_KEY");
+// Or for Bearer Token
+// client.setAccessToken("YOUR_JWT_TOKEN");
+```

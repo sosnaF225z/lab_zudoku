@@ -1,7 +1,7 @@
 import type { ZudokuConfig } from "zudoku";
 
 const config: ZudokuConfig = {
-  basePath: "/lab_zudoku",
+  // basePath: "/lab_zudoku",
   site: {
     logo: {
       src: { light: "/logo-light.svg", dark: "/logo-dark.svg" },
@@ -15,23 +15,16 @@ const config: ZudokuConfig = {
       label: "Documentation",
       items: [
         {
-          type: "category",
-          label: "Getting Started",
-          icon: "sparkles",
-          items: [
-            "/introduction",
-            {
-              type: "link",
-              icon: "folder-cog",
-              badge: {
-                label: "New",
-                color: "purple",
-              },
-              label: "API Reference",
-              to: "/api",
-            },
-          ],
+          type: "doc",
+          file: "Installation",
+          label: "Installation",
         },
+        {
+          type: "doc",
+          file: "Authorization",
+          label: "Authorization",
+        },
+
         {
           type: "category",
           label: "Useful Links",
@@ -40,9 +33,8 @@ const config: ZudokuConfig = {
           items: [
             {
               type: "link",
-              icon: "book",
-              label: "Zudoku Docs",
-              to: "https://zudoku.dev/docs/",
+              label: "SDK Sources",
+              to: "https://github.com/sosnaF225z/znu-lab/tree/main/src",
             },
           ],
         },
@@ -52,6 +44,11 @@ const config: ZudokuConfig = {
       type: "link",
       to: "/api",
       label: "API Reference",
+    },
+    {
+      type: "doc",
+      file: "about",
+      label: "About",
     },
   ],
   redirects: [{ from: "/", to: "/introduction" }],
